@@ -47,6 +47,16 @@
 
 Worktree directory: .worktrees/
 
+### Worktree Safety Gate
+
+**BEFORE creating any worktree**, you MUST:
+1. Run `git status` and confirm a clean working tree (no uncommitted or unstaged changes)
+2. If there are uncommitted changes, **commit them first** — do NOT stash, do NOT proceed
+3. If changes are WIP and shouldn't be committed, STOP and ask the user what to do
+4. After worktree merge/cleanup, verify the source branch still has all expected files
+
+This is non-negotiable. Uncommitted files on the source branch will be silently orphaned during worktree operations.
+
 ## Documentation Requirements
 - **CHANGELOG.md**: ALL user-facing changes MUST be documented in CHANGELOG.md (root)
 - **TODO.md**: ALL deferred work, known limitations, and planned features MUST be tracked in TODO.md (root)
