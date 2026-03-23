@@ -18,5 +18,5 @@ Before continuing, do the following exactly once:
       - /plugin marketplace add obra/superpowers-marketplace
       - /plugin install episodic-memory@superpowers-marketplace
   - project-standards
-    - Obtain it by running:
-      - /superpowers:writing-skills Create the project-standards skill in this project's .claude/skills/project-standards folder. It should apply best practices for developing [your application description here]
+    - Obtain it by running an example such as this:
+      - /preparestandards Apply best practices for developing this application such as solid, yagni, kiss, dry, and tdd
