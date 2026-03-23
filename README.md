@@ -7,6 +7,13 @@ claude plugin marketplace add greglamb/vibecode-workflow-marketplace
 claude plugin install vibecode-workflow@vibecode-workflow-marketplace
 ```
 
+Optional extras:
+
+```bash
+claude plugin install vscode-api@vibecode-workflow-marketplace
+claude plugin install fish-shell@vibecode-workflow-marketplace
+```
+
 ## Plugin: vibecode-workflow
 
 A project template for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) that provides structured commands, skills, and documentation conventions out of the box.
@@ -101,6 +108,14 @@ Create a directory under `.claude/skills/` with a `SKILL.md` file and an optiona
 #### Restricting Tool Access
 
 Commands can declare `allowed-tools` in their frontmatter to limit what Claude can do (see `commit.md` for an example that restricts to git operations only).
+
+## Plugin: vscode-api
+
+VS Code Extension API documentation and guidance for building VS Code extensions. Covers commands, webviews, tree views, language features, activation events, contribution points, and the extension manifest.
+
+## Plugin: fish-shell
+
+Fish shell (version 4.0.2) documentation for writing fish scripts, configuring fish, understanding fish syntax, and migrating from bash. Includes command references for string manipulation, control flow, variables, functions, jobs, I/O, and more.
 
 ## Recommended Plugins
 
