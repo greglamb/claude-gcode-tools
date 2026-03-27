@@ -6,7 +6,7 @@
 .env.*
 !.env.example
 
-# Worktrees and reference directories (created by /setthevibe)
+# Worktrees and reference directories (created by /vibesetup)
 .worktrees/
 _reference/
 

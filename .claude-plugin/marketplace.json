@@ -1,17 +1,17 @@
 {
-  "name": "vibecode-workflow-marketplace",
+  "name": "gcode-claude-marketplace",
   "owner": {
     "name": "Greg Lamb",
     "email": "email@greglamb.dev"
   },
   "metadata": {
     "description": "Collection of tools used in my AI assisted workflow",
-    "version": "0.2603.2501"
+    "version": "0.2603.2701"
   },
   "plugins": [
     {
-      "name": "vibecode-workflow",
-      "source": "./plugins/vibecode-workflow"
+      "name": "goodvibes-workflow",
+      "source": "./plugins/goodvibes-workflow"
     },
     {
       "name": "vscode-api",
@@ -28,6 +28,10 @@
     {
       "name": "project-documentation",
       "source": "./plugins/project-documentation"
+    },
+    {
+      "name": "presentation-design",
+      "source": "./plugins/presentation-design"
     }
   ]
 }

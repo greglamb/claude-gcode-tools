@@ -1,6 +1,6 @@
 #!/bin/bash
 # CLAUDE.md Drift Detection - SessionStart hook
-# Checks if CLAUDE.md exists and contains vibecode-workflow markers.
+# Checks if CLAUDE.md exists and contains goodvibes-workflow markers.
 
 INPUT=$(cat)
 CWD=$(echo "$INPUT" | jq -r '.cwd // empty')
@@ -13,13 +13,13 @@ if [ ! -f "CLAUDE.md" ]; then
   exit 0
 fi
 
-# Check for vibecode-workflow sentinel markers
-if ! grep -q '<!-- vibecode-workflow:start -->' CLAUDE.md 2>/dev/null; then
+# Check for goodvibes-workflow sentinel markers
+if ! grep -q '<!-- goodvibes-workflow:start -->' CLAUDE.md 2>/dev/null; then
   cat <<EOF
 {
   "hookSpecificOutput": {
     "hookEventName": "SessionStart",
-    "additionalContext": "CLAUDE.md exists but is missing vibecode-workflow markers. Run the vibecode-workflow skill in validate mode to check for drift."
+    "additionalContext": "CLAUDE.md exists but is missing goodvibes-workflow markers. Run the goodvibes-workflow skill in validate mode to check for drift."
   }
 }
 EOF

@@ -38,7 +38,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/plotcaper-pre-sync.sh"
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/vibeplan-pre-sync.sh"
           }
         ]
       }

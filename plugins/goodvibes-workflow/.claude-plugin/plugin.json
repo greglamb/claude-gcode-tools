@@ -1,6 +1,6 @@
 {
-  "name": "gas-typescript",
-  "description": "Best practices, patterns, and toolchain for Google Apps Script projects using TypeScript, Rollup, and clasp.",
+  "name": "goodvibes-workflow",
+  "description": "Collection of tools used in my AI assisted workflow",
   "version": "0.2603.2701",
   "author": {
     "name": "Greg Lamb",

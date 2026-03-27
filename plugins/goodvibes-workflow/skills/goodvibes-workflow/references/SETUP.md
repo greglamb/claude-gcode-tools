@@ -79,15 +79,15 @@ After each successful `git commit`, checks whether CHANGELOG.md and TODO.md were
 
 ### CLAUDE.md Drift Detection (`SessionStart` → `claudemd-drift-detection.sh`)
 
-On session start, checks if CLAUDE.md exists but is missing vibecode-workflow markers. Suggests running the vibecode-workflow skill in validate mode.
+On session start, checks if CLAUDE.md exists but is missing goodvibes-workflow markers. Suggests running the goodvibes-workflow skill in validate mode.
 
 ### Plugin Dependency Check (`SessionStart` → `check-plugin-dependencies.sh`)
 
 On session start, verifies that required plugins (superpowers, episodic-memory, project-standards) are installed. Warns with install commands if missing.
 
-### episodic-memory Sync (`PreToolUse` → `plotcaper-pre-sync.sh`)
+### episodic-memory Sync (`PreToolUse` → `vibeplan-pre-sync.sh`)
 
-Automatically runs `episodic-memory sync` before the plotcaper skill executes.
+Automatically runs `episodic-memory sync` before the vibeplan command executes.
 
 ## Documentation Requirements
 - **CHANGELOG.md**: ALL user-facing changes MUST be documented in CHANGELOG.md (root)

@@ -1,12 +1,12 @@
 #!/bin/bash
-# Plotcaper Pre-Sync - PreToolUse hook for Skill
-# Automatically runs `episodic-memory sync` before plotcaper executes.
+# Vibeplan Pre-Sync - PreToolUse hook for Skill
+# Automatically runs `episodic-memory sync` before vibeplan executes.
 
 INPUT=$(cat)
 SKILL=$(echo "$INPUT" | jq -r '.tool_input.skill // empty')
 
-# Only trigger for plotcaper
-if [ "$SKILL" != "plotcaper" ]; then
+# Only trigger for vibeplan (short or fully-qualified name)
+if [ "$SKILL" != "vibeplan" ] && [ "$SKILL" != "goodvibes-workflow:vibeplan" ]; then
   exit 0
 fi
 

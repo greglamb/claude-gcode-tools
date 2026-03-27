@@ -1,19 +1,19 @@
 ---
-name: vibecode-workflow
+name: goodvibes-workflow
 description: >
-  Inject and maintain vibecode-workflow project guidelines in a project's CLAUDE.md file.
-  Use this skill whenever the user mentions vibecode-workflow setup, initialization, or validation.
-  Trigger on phrases like "set up vibecode-workflow", "initialize project guidelines",
-  "validate my CLAUDE.md", "check vibecode-workflow config", "add workflow guidelines",
+  Inject and maintain goodvibes-workflow project guidelines in a project's CLAUDE.md file.
+  Use this skill whenever the user mentions goodvibes-workflow setup, initialization, or validation.
+  Trigger on phrases like "set up goodvibes-workflow", "initialize project guidelines",
+  "validate my CLAUDE.md", "check goodvibes-workflow config", "add workflow guidelines",
   or any reference to ensuring CLAUDE.md contains the standard development process
   (brainstorming, worktrees, TDD, code review, superpowers, episodic-memory).
   Also trigger when the user creates a new project and mentions wanting the standard
   development workflow, or when they suspect their CLAUDE.md is missing guidelines.
 ---
 
-# vibecode-workflow
+# goodvibes-workflow
 
-Ensures a project's `CLAUDE.md` includes the vibecode-workflow development guidelines from `references/SETUP.md`.
+Ensures a project's `CLAUDE.md` includes the goodvibes-workflow development guidelines from `references/SETUP.md`.
 
 ## How it works
 
@@ -24,23 +24,23 @@ The skill has two modes: **initialize** and **validate**. Both are idempotent.
 The injected content is wrapped in markers so it can be detected and updated deterministically:
 
 ```
-<!-- vibecode-workflow:start -->
+<!-- goodvibes-workflow:start -->
 (content from SETUP.md, possibly customized)
-<!-- vibecode-workflow:end -->
+<!-- goodvibes-workflow:end -->
 ```
 
 These markers are the primary detection mechanism. Agent review is used as a secondary validation step to confirm completeness.
 
 ## Initialize mode
 
-Use when the user wants to add vibecode-workflow guidelines to a project for the first time, or when no markers are detected in CLAUDE.md.
+Use when the user wants to add goodvibes-workflow guidelines to a project for the first time, or when no markers are detected in CLAUDE.md.
 
 ### Steps
 
 1. Read `references/SETUP.md` from this skill's directory.
 2. Check if `CLAUDE.md` exists at the project root.
    - If it doesn't exist, create it.
-3. Search `CLAUDE.md` for `<!-- vibecode-workflow:start -->`.
+3. Search `CLAUDE.md` for `<!-- goodvibes-workflow:start -->`.
    - If found, switch to **validate mode** instead.
 4. Ask the user if they want to customize the guidelines before injection. Examples of customizations:
    - Adding or removing skills from the "Required Skills" list
@@ -51,22 +51,22 @@ Use when the user wants to add vibecode-workflow guidelines to a project for the
 6. Append the following to `CLAUDE.md`, preserving any existing content:
 
 ```
-<!-- vibecode-workflow:start -->
+<!-- goodvibes-workflow:start -->
 {SETUP.md content, with any customizations applied}
-<!-- vibecode-workflow:end -->
+<!-- goodvibes-workflow:end -->
 ```
 
 7. Confirm to the user what was added and where.
 
 ## Validate mode
 
-Use when the user wants to verify their CLAUDE.md still contains the vibecode-workflow guidelines, or when initialize mode detects existing markers.
+Use when the user wants to verify their CLAUDE.md still contains the goodvibes-workflow guidelines, or when initialize mode detects existing markers.
 
 ### Steps
 
 1. Read `references/SETUP.md` from this skill's directory.
 2. Read `CLAUDE.md` from the project root.
-3. Locate the `<!-- vibecode-workflow:start -->` and `<!-- vibecode-workflow:end -->` markers.
+3. Locate the `<!-- goodvibes-workflow:start -->` and `<!-- goodvibes-workflow:end -->` markers.
    - If markers are missing, inform the user and offer to run **initialize mode**.
 4. Extract the content between the markers.
 5. Review the extracted content against `references/SETUP.md` and check:
