@@ -132,8 +132,6 @@ npx skills add https://github.com/greglamb/claude-gcode-tools/tree/main/plugins/
 npx skills add https://github.com/greglamb/claude-gcode-tools/tree/main/plugins/presentation-design/skills/presentation-design -a claude-code
 ```
 
-Browse more community skills at [skills.sh](https://skills.sh).
-
 ## Recommended Extras
 
 Plugins, skills, and tools from other sources that pair well with this marketplace. Items marked with 🔌 are plugins (installed via `claude plugin install`). Items marked with 🧩 are skills (installed via `npx skills add`).
