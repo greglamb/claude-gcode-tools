@@ -59,6 +59,28 @@ git clone https://github.com/jgraph/drawio-mcp.git /tmp/drawio-mcp && cp -r /tmp
 
 </details>
 
+<details>
+<summary><strong>PPTX (PowerPoint)</strong> — Create, read, edit, and convert PowerPoint presentations</summary>
+
+Requires `pipx install "markitdown[pptx]"`, `pipx install Pillow`, and `npm install -g pptxgenjs`. LibreOffice optional for PDF conversion.
+
+```bash
+/plugin marketplace add anthropics/skills
+/plugin install document-skills@anthropic-agent-skills
+```
+
+</details>
+
+<details>
+<summary><strong>Skill Creator</strong> — Create, modify, and optimize Claude Code skills with eval benchmarking</summary>
+
+```bash
+/plugin marketplace add anthropics/skills
+/plugin install skill-creator@anthropic-agent-skills
+```
+
+</details>
+
 ### Swift / Apple Development Skills
 
 <details>
