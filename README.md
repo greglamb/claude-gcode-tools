@@ -48,6 +48,17 @@ npx skills add https://github.com/googleworkspace/cli
 
 </details>
 
+<details>
+<summary><strong>Draw.io Diagrams</strong> — Generate native draw.io diagrams from natural language, with optional PNG/SVG/PDF export</summary>
+
+Requires [draw.io Desktop](https://github.com/jgraph/drawio-desktop) for PNG/SVG/PDF export (optional).
+
+```bash
+git clone https://github.com/jgraph/drawio-mcp.git /tmp/drawio-mcp && cp -r /tmp/drawio-mcp/skill-cli/drawio .claude/skills/ && rm -rf /tmp/drawio-mcp
+```
+
+</details>
+
 ### Swift / Apple Development
 
 <details>
