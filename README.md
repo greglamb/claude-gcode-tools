@@ -176,7 +176,7 @@ claude plugin install skill-creator@claude-plugins-official
 <details>
 <summary>🔌 <strong>skill-seekers</strong> — Create AI skills from documentation, repos, and other sources</summary>
 
-Requires [Skill Seekers](https://github.com/yusufkaraaslan/Skill_Seekers) (`pipx install skill-seekers[mcp]` or `brew install skill-seekers`).
+Requires [Skill Seekers](https://github.com/yusufkaraaslan/Skill_Seekers) (`uv tool install skill-seekers[mcp]` or `brew install skill-seekers`).
 
 ```bash
 claude plugin install skill-seekers@claude-plugin-directory
@@ -211,7 +211,7 @@ npx skills add https://github.com/jgraph/drawio-mcp/tree/main/skill-cli/drawio -
 <details>
 <summary>🔌 <strong>PPTX (PowerPoint)</strong> — Create, read, edit, and convert PowerPoint presentations</summary>
 
-Requires `pipx install "markitdown[pptx]"`, `pipx install Pillow`, and `npm install -g pptxgenjs`. LibreOffice optional for PDF conversion.
+Requires `uv tool install "markitdown[pptx]"`, `uv tool install Pillow`, and `npm install -g pptxgenjs`. LibreOffice optional for PDF conversion.
 
 ```bash
 claude plugin marketplace add anthropics/skills
