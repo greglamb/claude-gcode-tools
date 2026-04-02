@@ -220,6 +220,17 @@ claude plugin install document-skills@anthropic-agent-skills
 
 </details>
 
+<details>
+<summary>🧩 <strong>Microsoft Rust Guidelines</strong> — Enforces Microsoft's Pragmatic Rust Guidelines on every .rs file</summary>
+
+No additional dependencies — generated guideline files are included in the repo.
+
+```bash
+npx skills add https://gitlab.com/lx-industries/ms-rust-skill.git -a claude-code
+```
+
+</details>
+
 ### Swift / Apple Development
 
 <details>
