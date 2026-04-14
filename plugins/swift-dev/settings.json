@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "xcodebuildmcp *",
+      "swift build",
+      "swift test",
+      "swift package *",
+      "swiftlint *",
+      "swiftformat *"
+    ]
+  }
+}
