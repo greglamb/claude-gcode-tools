@@ -20,11 +20,12 @@ Run `${CLAUDE_PLUGIN_ROOT}/scripts/setup-dependencies.sh` to install XcodeBuildM
 
 After the script completes, check if Axiom is installed by looking for any skills with "axiom" in the namespace. If Axiom is NOT installed, display this prominently — not buried in other output:
 
-**⚠️ Axiom is not installed.** It must be installed separately — run this from a terminal when Claude Code is not running:
+**⚠️ Axiom is not installed.** Add its marketplace and install the plugin:
+```bash
+claude plugin marketplace add CharlesWiltgen/Axiom
+claude plugin install CharlesWiltgen/Axiom
 ```
-claude plugin add CharlesWiltgen/Axiom
-```
-Or from within Claude Code: `/plugin` → search "axiom" → install, then `/reload-plugins`.
+After installing, run `/reload-plugins` if you ran the commands from inside Claude Code, or just restart the session.
 
 Axiom provides 175+ Apple development skills and autonomous agents. The plugin works without it, but you lose broad framework coverage.
 
