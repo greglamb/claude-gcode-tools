@@ -6,8 +6,11 @@ A Claude Code plugin for Swift/Apple development. Bundles skills, a subagent, an
 
 ### 1. Install the plugin (once, globally)
 
+From the [`claude-gcode-tools`](https://github.com/greglamb/claude-gcode-tools) marketplace:
+
 ```bash
-claude plugin add greglamb/swift-dev
+claude plugin marketplace add greglamb/claude-gcode-tools
+claude plugin install swift-dev@claude-gcode-tools
 ```
 
 ### 2. Install Axiom (recommended, once, globally)

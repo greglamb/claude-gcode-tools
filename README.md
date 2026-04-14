@@ -32,6 +32,7 @@ claude plugin install goodvibes-workflow@claude-gcode-tools
 | Plugin                                                     | Description                                                                                                                                                 |
 |------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [goodvibes-workflow](plugins/goodvibes-workflow/README.md) | Structured development workflow with commands, skills, hooks, and documentation conventions                                                                 |
+| [swift-dev](plugins/swift-dev/README.md)                   | Swift/Apple development — scaffolds deterministic project rules, installs Hudson Pro skills, and adds build-fix, TDD, verify-ui, health-check, review flows |
 | vscode-api                                                 | VS Code Extension API documentation — commands, webviews, tree views, language features, activation events, contribution points, and the extension manifest |
 | fish-shell                                                 | Fish shell (v4.0.2) documentation — scripting, configuration, syntax, and bash migration                                                                    |
 | gas-typescript                                             | Best practices, patterns, and toolchain for Google Apps Script projects using TypeScript, Rollup, and clasp                                                 |
@@ -50,6 +51,10 @@ Then install the plugins you want:
 
 ```bash
 claude plugin install goodvibes-workflow@claude-gcode-tools
+```
+
+```bash
+claude plugin install swift-dev@claude-gcode-tools
 ```
 
 ```bash
