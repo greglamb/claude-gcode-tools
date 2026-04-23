@@ -6,13 +6,9 @@
   },
   "metadata": {
     "description": "Collection of tools used in my AI assisted workflow",
-    "version": "0.2604.1402"
+    "version": "0.2604.2301"
   },
   "plugins": [
-    {
-      "name": "goodvibes-workflow",
-      "source": "./plugins/goodvibes-workflow"
-    },
     {
       "name": "goodvibes-noworries",
       "source": "./plugins/goodvibes-noworries"

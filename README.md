@@ -24,14 +24,15 @@ Some recommended extras have additional dependencies — these are noted per ite
 
 ```bash
 claude plugin marketplace add greglamb/claude-gcode-tools
-claude plugin install goodvibes-workflow@claude-gcode-tools
+claude plugin install swift-dev@claude-gcode-tools
 ```
+
+> **Note:** The `goodvibes-workflow` plugin has been retired from this marketplace and absorbed into the [goodvibes](https://github.com/greglamb/goodvibes) plugin. See [Migration: goodvibes-workflow retired](#migration-goodvibes-workflow-retired-2026-04-23) below.
 
 ## Included Plugins
 
 | Plugin                                                     | Description                                                                                                                                                 |
 |------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [goodvibes-workflow](plugins/goodvibes-workflow/README.md) | Structured development workflow with commands, skills, hooks, and documentation conventions                                                                 |
 | [swift-dev](plugins/swift-dev/README.md)                   | Swift/Apple development — scaffolds deterministic project rules, installs Hudson Pro skills, and adds build-fix, TDD, verify-ui, health-check, review flows |
 | vscode-api                                                 | VS Code Extension API documentation — commands, webviews, tree views, language features, activation events, contribution points, and the extension manifest |
 | fish-shell                                                 | Fish shell (v4.0.2) documentation — scripting, configuration, syntax, and bash migration                                                                    |
@@ -48,10 +49,6 @@ claude plugin marketplace add greglamb/claude-gcode-tools
 ```
 
 Then install the plugins you want:
-
-```bash
-claude plugin install goodvibes-workflow@claude-gcode-tools
-```
 
 ```bash
 claude plugin install swift-dev@claude-gcode-tools
@@ -113,9 +110,7 @@ npx skills add owner/repo -a claude-code -g
 
 ## Install via npx skills (Alternative)
 
-Five of the six included plugins are also available as standalone skills via Vercel's [`skills` CLI](https://github.com/vercel-labs/skills). This is useful if you don't need the full marketplace, want to install individual skills outside the plugin system, or want project-scoped installation that works reliably.
-
-> **Note:** goodvibes-workflow uses hooks, which are only supported via the plugin marketplace — it cannot be installed via npx skills.
+Most of the included plugins are also available as standalone skills via Vercel's [`skills` CLI](https://github.com/vercel-labs/skills). This is useful if you don't need the full marketplace, want to install individual skills outside the plugin system, or want project-scoped installation that works reliably.
 
 ```bash
 npx skills add https://github.com/greglamb/claude-gcode-tools/tree/main/plugins/vscode-api/skills/vscode-api -a claude-code
@@ -283,6 +278,15 @@ npx skills remove skill-name -a claude-code
 # Remove interactively (select from installed)
 npx skills remove
 ```
+
+## Migration: goodvibes-workflow retired (2026-04-23)
+
+The `goodvibes-workflow` plugin has been merged into the [goodvibes plugin](https://github.com/greglamb/goodvibes). Existing users should:
+
+1. Install goodvibes: `claude plugin install goodvibes@<marketplace>`
+2. Uninstall goodvibes-workflow: `claude plugin uninstall goodvibes-workflow`
+3. In each project using the old plugin, run `/goodvibes:setup` to migrate CLAUDE.md markers from `<!-- goodvibes-workflow:* -->` to `<!-- goodvibes:project-setup:* -->`, and to deploy the new `CHANGELOG_DIRECTIVES.md` quick-reference file.
+4. Commands renamed: `/vibe*` → `/goodvibes:*`. Update any personal notes or scripts that reference the old names. `/vibedebug` was retired without a replacement — use `goodvibes:systematic-debugging` directly.
 
 ## License
 
