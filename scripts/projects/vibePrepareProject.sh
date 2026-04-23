@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Adds the greglamb/claude-gcode-tools and enables the goodvibes-workflow
+# Adds the greglamb/claude-gcode-tools and enables the goodvibes
 # plugin in the current project's .claude/settings.json.
 #
 # Usage: ./vibePrepareProject.sh [project-root]
@@ -9,7 +9,7 @@ set -euo pipefail
 
 MARKETPLACE_NAME="claude-gcode-tools"
 MARKETPLACE_REPO="greglamb/claude-gcode-tools"
-PLUGIN_NAME="goodvibes-workflow"
+PLUGIN_NAME="goodvibes"
 
 PROJECT_ROOT="${1:-.}"
 SETTINGS_DIR="${PROJECT_ROOT}/.claude"

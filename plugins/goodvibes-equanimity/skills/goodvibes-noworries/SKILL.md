@@ -1,5 +1,5 @@
 ---
-name: goodvibes-noworries
+name: goodvibes-equanimity
 description: >
   Prevents reward hacking, corner-cutting, and degraded output quality caused by accumulated failure pressure.
   Use this skill whenever Claude encounters repeated failures, impossible constraints, unsolvable problems,

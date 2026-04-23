@@ -24,14 +24,14 @@ Some recommended extras have additional dependencies — these are noted per ite
 
 ```bash
 claude plugin marketplace add greglamb/claude-gcode-tools
-claude plugin install goodvibes-workflow@claude-gcode-tools
+claude plugin install goodvibes@claude-gcode-tools
 ```
 
 ## Included Plugins
 
 | Plugin                                                     | Description                                                                                                                                                 |
 |------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [goodvibes-workflow](plugins/goodvibes-workflow/README.md) | Structured development workflow with commands, skills, hooks, and documentation conventions                                                                 |
+| [goodvibes](https://github.com/greglamb/goodvibes/blob/main/README.md) | Structured development workflow with commands, skills, hooks, and documentation conventions                                                                 |
 | [swift-dev](plugins/swift-dev/README.md)                   | Swift/Apple development — scaffolds deterministic project rules, installs Hudson Pro skills, and adds build-fix, TDD, verify-ui, health-check, review flows |
 | vscode-api                                                 | VS Code Extension API documentation — commands, webviews, tree views, language features, activation events, contribution points, and the extension manifest |
 | fish-shell                                                 | Fish shell (v4.0.2) documentation — scripting, configuration, syntax, and bash migration                                                                    |
@@ -50,7 +50,7 @@ claude plugin marketplace add greglamb/claude-gcode-tools
 Then install the plugins you want:
 
 ```bash
-claude plugin install goodvibes-workflow@claude-gcode-tools
+claude plugin install goodvibes@claude-gcode-tools
 ```
 
 ```bash
@@ -115,7 +115,7 @@ npx skills add owner/repo -a claude-code -g
 
 Five of the six included plugins are also available as standalone skills via Vercel's [`skills` CLI](https://github.com/vercel-labs/skills). This is useful if you don't need the full marketplace, want to install individual skills outside the plugin system, or want project-scoped installation that works reliably.
 
-> **Note:** goodvibes-workflow uses hooks, which are only supported via the plugin marketplace — it cannot be installed via npx skills.
+> **Note:** goodvibes uses hooks, which are only supported via the plugin marketplace — it cannot be installed via npx skills.
 
 ```bash
 npx skills add https://github.com/greglamb/claude-gcode-tools/tree/main/plugins/vscode-api/skills/vscode-api -a claude-code
@@ -142,18 +142,6 @@ npx skills add https://github.com/greglamb/claude-gcode-tools/tree/main/plugins/
 Plugins, skills, and tools from other sources that pair well with this marketplace. Items marked with 🔌 are plugins (installed via `claude plugin install`). Items marked with 🧩 are skills (installed via `npx skills add`).
 
 ### General Plugins
-
-<details>
-<summary>🔌 <strong>superpowers</strong> — Extended planning, brainstorming, TDD, code review, and verification capabilities</summary>
-
-Requires adding the third-party marketplace first (one-time setup):
-
-```bash
-claude plugin marketplace add obra/superpowers-marketplace
-claude plugin install superpowers@superpowers-marketplace
-```
-
-</details>
 
 <details>
 <summary>🔌 <strong>episodic-memory</strong> — Persistent context and conversation recall across Claude Code sessions</summary>
