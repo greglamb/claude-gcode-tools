@@ -6,12 +6,15 @@
   },
   "metadata": {
     "description": "Collection of tools used in my AI assisted workflow",
-    "version": "0.2604.2302"
+    "version": "0.2604.2303"
   },
   "plugins": [
     {
-      "source": "git",
-      "url": "https://github.com/greglamb/goodvibes.git"
+      "name": "goodvibes",
+      "source": {
+        "source": "github",
+        "repo": "greglamb/goodvibes"
+      }
     },
     {
       "name": "goodvibes-equanimity",
